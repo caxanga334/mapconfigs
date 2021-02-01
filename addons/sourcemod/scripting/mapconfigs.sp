@@ -136,8 +136,8 @@ void ExecuteMapSpecificConfigs() {
 		ServerCommand("exec %s%s", CONFIG_DIR, configFile);
 	}
 	
-	CloseHandle(dir);
-	CloseHandle(adt_configs);
+	delete dir;
+	delete adt_configs;
 	
 	return;
 }
